@@ -4,8 +4,10 @@ exports[`App > create html snapshot 1`] = `
 <div
   className="App container"
 >
-  <h1>
-    Pokemon API EXAMPLE
+  <h1
+    id="titleHeader"
+  >
+    Pokemon API EX
   </h1>
 </div>
 `;
