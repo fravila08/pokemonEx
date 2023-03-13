@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import { Container } from 'react-bootstrap'
 import axios from 'axios'
-
+import { PokemonCard } from './components/pokemonCard'
 
 export interface IPokemon {
   name : string;
@@ -20,12 +19,13 @@ export async function getPokemon(): Promise<IPokemon>{
 }
 
 function App() {
-  const [pokemon, setPokemon] = useState({})
-  
+  const [pokemon, setPokemon] = useState<IPokemon>({name:'none', img:'none'})
+  const [show, setShow] = useState(false)
   useEffect(()=>{
     const myPokemon =async () => {
       let pokeObject = await getPokemon()
       setPokemon(pokeObject)
+      setShow(true)
     }
     myPokemon()
   },[])
@@ -37,6 +37,11 @@ function App() {
   return (
     <Container className="App">
       <h1 id='titleHeader'>Pokemon API EX</h1>
+      {show ?
+       <PokemonCard pokemon={pokemon} />
+       :
+       null
+      }
     </Container>
   )
 }

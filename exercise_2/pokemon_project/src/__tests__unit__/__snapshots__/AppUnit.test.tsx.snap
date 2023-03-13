@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App > create html snapshot 1`] = `
+<div
+  className="App container"
+>
+  <h1
+    id="titleHeader"
+  >
+    Pokemon API EX
+  </h1>
+</div>
+`;

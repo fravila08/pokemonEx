@@ -1,0 +1,28 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PokemonCard > Create snapshot of component 1`] = `
+<div
+  className="card"
+  style={
+    {
+      "width": "18rem",
+    }
+  }
+>
+  <img
+    className="card-img-top"
+    id="pokemonIMG"
+    src="img"
+  />
+  <div
+    className="card-body"
+  >
+    <div
+      className="card-title h5"
+      id="pokemonName"
+    >
+      name
+    </div>
+  </div>
+</div>
+`;
